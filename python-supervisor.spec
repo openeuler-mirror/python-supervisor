@@ -1,9 +1,9 @@
 %global _empty_manifest_terminate_build 0
 Name:		python-supervisor
 Version:	4.2.2
-Release:	2
+Release:	3
 Summary:	A system for controlling process state under UNIX
-License:	BSD and MIT
+License:	BSD-3-Clause
 URL:		http://supervisord.org/
 Source0:	https://files.pythonhosted.org/packages/d3/7f/c780b7471ba0ff4548967a9f7a8b0bfce222c3a496c3dfad0164172222b0/supervisor-4.2.2.tar.gz
 Source1:	supervisord.service
@@ -109,6 +109,9 @@ mv %{buildroot}/doclist.lst .
 %{_docdir}/*
 
 %changelog
+* Tue May 10 2022 yangping <yangping69@h-partners> - 4.2.2-3
+- License compliance rectification
+
 * Thu Mar 03 2022 Lv Genggeng <lvgenggeng@uniontech.com> - 4.2.2-2
 - add service and conf file
 
