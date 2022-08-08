@@ -1,17 +1,19 @@
 %global _empty_manifest_terminate_build 0
 Name:		python-supervisor
-Version:	4.2.2
-Release:	3
+Version:	4.2.4
+Release:	1
 Summary:	A system for controlling process state under UNIX
 License:	BSD-3-Clause
 URL:		http://supervisord.org/
-Source0:	https://files.pythonhosted.org/packages/d3/7f/c780b7471ba0ff4548967a9f7a8b0bfce222c3a496c3dfad0164172222b0/supervisor-4.2.2.tar.gz
+Source0:        https://files.pythonhosted.org/packages/b3/41/2806c3c66b3e4a847843821bc0db447a58b7a9b0c39a49b354f287569130/supervisor-4.2.4.tar.gz
+
 Source1:	supervisord.service
 Source2:	supervisord.conf
 Source3:	supervisor.logrotate
 Source4:	supervisor.tmpfiles
 BuildArch:	noarch
 
+Requires:       python3-setuptools
 Requires:	python3-pytest
 Requires:	python3-pytest-cov
 
@@ -39,7 +41,7 @@ Supervisor is a client/server system that allows its users to
 control a number of processes on UNIX-like operating systems.
 
 %prep
-%autosetup -n supervisor-4.2.2
+%autosetup -n supervisor-4.2.4
 
 %build
 %py3_build
@@ -109,6 +111,9 @@ mv %{buildroot}/doclist.lst .
 %{_docdir}/*
 
 %changelog
+* Fri Aug 05 2022 liukuo <liukuo@kylinos.cn> - 4.2.4-1
+- Update to 4.2.4
+
 * Tue May 10 2022 yangping <yangping69@h-partners> - 4.2.2-3
 - License compliance rectification
 
